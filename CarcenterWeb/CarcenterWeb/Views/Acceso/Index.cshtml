@@ -15,7 +15,46 @@
          </div>
     </form>
 
-
-    
-
 </div>
+@section scripts
+
+{
+<script>
+    $(document).ready(function () {
+
+        $("#frmLogin"), submit(funtion(e){
+
+            e.preventDefault();
+            url = "@Url.Content("~/Acceso/Enter")";
+            parametros = $(this).serialize();
+            $.post(url, parametros, funcion(data){
+
+                if(data == "1"){
+                document.location.href = "@Url.Content("~/")";
+            }else { alter(data)}
+
+
+
+            }
+
+
+            });
+
+
+
+
+
+
+
+        });
+
+
+
+
+
+
+
+    });
+
+</script>
+}
